@@ -1,0 +1,58 @@
+<html>
+<head>
+	<style>
+		/* Selects all paragraph elements */
+		p {
+			color: black;
+			font-size: 18px;
+		}
+
+		/* Selects the element with id "example" */
+		#example {
+			background-color: yellow;
+			padding: 20px;
+		}
+        #ex {
+            background-color:goldenrod;
+            padding: 20px;
+        }
+
+		/* Selects all elements with class "highlight" */
+		.highlight {
+			font-weight: bold;
+		}
+
+		/* Selects the first child of each <ul> element */
+		ul > li:first-child {
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+
+<body>
+    <div id="ex">
+	<h1>Welcome to my website!</h1>
+	
+	<p>This is a paragraph.</p>
+	<p>This is another paragraph.</p>
+
+	<div id="example">
+		<p>This is a paragraph inside a div with a yellow background.</p>
+	</div>
+	<ul>
+		<li>First item</li>
+		<li>Second item</li>
+		<li>Third item</li>
+	</ul>
+
+	<ul>
+		<li>One</li>
+		<li>Two</li>
+		<li>Three</li>
+	</ul>
+
+	<p class="highlight">This paragraph is highlighted.</p>
+	<p class="highlight">So is this one.</p>
+    </div>
+</body>
+</html>
