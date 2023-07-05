@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day_8_HW1</title>
+
+    <style type="text/CSS">
+        body{
+            background-color: lightgreen;;
+        }
+    </style>
+</head>
+
+<body id="mybody" onload="loadme()">
+
+    <p>press any key to display date:</p>
+    <input type="text" id="key">
+    <script>
+        var o = true;
+        while (o) {
+            o = false;
+            let ask = prompt("keypress(kp) or keyup(ku)");
+            if (ask == "kp") {
+                var key = document.getElementById('key');
+                key.addEventListener("keypress", () => {
+                    var a = new Date();
+                    alert(a);
+                });
+            }
+            else if (ask == "ku") {
+                var key = document.getElementById('key');
+                key.addEventListener("keyup", () => {
+                    var a = new Date();
+                    alert(a);
+                });
+            }
+            else {
+                alert("You enter wrong choice, please try again.");
+                o = true;
+            }
+        }
+        function loadme() {
+            alert("Your page is loded.");
+        }
+    </script>
+</body>
+
+</html>

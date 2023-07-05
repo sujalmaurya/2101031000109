@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td{
+            margin: auto;
+        }
+        #array{
+            height: 40px;
+        }
+        #push td input,#pop td input,#unshift td input,#shift td input{
+            /* height: 40px; */
+            margin: 16px 0 0 0;
+        }
+        #sort td input,#reverse td input{
+            margin: 16px 0 16px 0;
+        }
+        #concat td input{
+            margin: 16px 0 0 0;
+        }
+        #inp_arr,#inp_display{
+            width: 225px;
+        }
+    </style>
+</head>
+<body>
+    <table border='1'>
+        <tr id="array">
+            <td align="center">Array:</td>
+            <td align="center"><input type="text" id="inp_arr"></td>
+        </tr>
+        <tr id="push">
+            <td align="center">Push:</td>
+            <td align="center">
+                <input type="text" placeholder="Enter text to push" id="inp_push">
+                <input type="button" value="push" id="inp_push_btn"><br>
+                <p>New element will be add at last</p>
+            </td>
+        </tr>
+        <tr id="pop">
+            <td align="center">pop:</td>
+            <td align="center">
+                <input type="button" value="Click to POP" id="inp_pop_btn"><br>
+                <p>Last element of the array will be remove</p>
+            </td>
+        </tr>
+        <tr id="unshift">
+            <td align="center">UnShift:</td>
+            <td align="center">
+                <input type="text" placeholder="Enter text to Unshift" id="inp_unshift">
+                <input type="button" value="UnShift" id="inp_unshift_btn"><br>
+                <p>New element will be add at First</p>
+            </td>
+        </tr>
+        <tr id="shift">
+            <td align="center">Shift:</td>
+            <td align="center">
+                <input type="button" value="Click to Shift" id="inp_shift_btn"><br>
+                <p>First element of the array will be remove</p>
+            </td>
+        </tr>
+        <tr id="sort">
+            <td align="center">Sort:</td>
+            <td align="center">
+                <input type="button" value="Sort Array" id="inp_sort_btn">
+            </td>
+        </tr>
+        <tr id="reverse">
+            <td align="center">Reverse:</td>
+            <td align="center">
+                <input type="button" value="Reverse" id="inp_reverse_btn">
+            </td>
+        </tr>
+        <tr id="concat">
+            <td align="center">Concat:</td>
+            <td align="center">
+                <input type="text" id="inp_concat">
+                <input type="button" value="Merge Array" id="inp_concat_btn"><br>
+                <input type="text" id="inp_display">
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        var array=["Maurya","Sujal",20,"male","ahmedabad"];
+
+        // for input text
+        var inp_arr=document.getElementById("inp_arr");
+        var inp_push=document.getElementById('inp_push');
+        var inp_unshift=document.getElementById('inp_unshift');
+        var inp_concat=document.getElementById('inp_concat');
+        var inp_display=document.getElementById('inp_display');
+
+        // for input button
+        var inp_push_btn=document.getElementById('inp_push_btn');
+        var inp_pop_btn=document.getElementById('inp_pop_btn');
+        var inp_unshift_btn=document.getElementById('inp_unshift_btn');
+        var inp_shift_btn=document.getElementById('inp_shift_btn');
+        var inp_sort_btn=document.getElementById('inp_sort_btn');
+        var inp_reverse_btn=document.getElementById('inp_reverse_btn');
+        var inp_concat_btn=document.getElementById('inp_concat_btn');
+
+        inp_arr.value=array;
+        inp_push_btn.addEventListener("click",()=>{
+            array.push(inp_push.value);
+            inp_arr.value=array;
+        });
+        inp_pop_btn.addEventListener("click",()=>{
+            array.pop();
+            inp_arr.value=array;
+        });
+        inp_unshift_btn.addEventListener("click",()=>{
+            array.unshift(inp_unshift.value);
+            inp_arr.value=array;
+        });
+        inp_shift_btn.addEventListener("click",()=>{
+            array.shift();
+            inp_arr.value=array;
+        });
+        inp_sort_btn.addEventListener("click",()=>{
+            array.sort();
+            inp_arr.value=array;
+        });
+        inp_reverse_btn.addEventListener("click",()=>{
+            array.reverse();
+            inp_arr.value=array;
+        });
+        inp_concat_btn.addEventListener("click",()=>{
+            let array_concate=array.concat(inp_concat.value);
+            inp_display.value=array_concate;
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day_8_table</title>
+
+    <style type="text/CSS">
+        body{
+            background-color: lightskyblue;
+        }
+    </style>
+    
+</head>
+<body>
+    Enter number of rows : <input type="text" id="rows">
+    Enter number of colums : <input type="text" id="colums">
+    <input type="button" value="Generate table" id="button">
+
+    <script>
+        var rows=document.getElementById("rows");
+        var colums=document.getElementById("colums");
+        var button=document.getElementById("button");
+
+        button.addEventListener("click",()=>{
+            document.write("<table border='1' width='80%' height='300px'>");
+                for(let i=0;i<rows.value;i++){
+                    document.write("<tr>");
+                for(let j=0;j<colums.value;j++){
+                    document.write("<td align='center'>"+"["+i+"]"+"["+j+"]");
+                }
+            }
+                document.write("</tr>");
+            });
+            document.write("</table>");
+    </script>
+</body>
+</html>

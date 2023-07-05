@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day_8_keypress</title>
+
+    <style type="text/CSS">
+        body{
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    <p>press any key to display date:</p>
+    <input type="text" id="key">
+
+    <script>
+        var key=document.getElementById("key");
+        key.addEventListener("keyup",()=>{
+            var a=new Date();
+            alert(a);
+        });
+    </script>
+</body>
+</html>
